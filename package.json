@@ -1,0 +1,20 @@
+{
+  "name": "yonyxmala",
+  "version": "1.0.0",
+  "description": "Cool beans",
+  "main": "index.ts",
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "ts-types": " tsc --emitDeclarationOnly --outDir lib",
+    "build": "rimraf lib && node ./esbuild.config.js && npm run ts-types",
+    "builder": "node ./esbuild.config.js",
+    "start": "node esbuild.config.run.js -w"
+  },
+  "dependencies": {
+    "esbuild": "^0.19.5",
+    "esbuild-serve": "^1.0.1",
+    "rimraf": "^5.0.5",
+    "three": "^0.158.0"
+  }
+}
